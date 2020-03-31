@@ -29,7 +29,7 @@ html {
 
 
 body {
-
+min-width: 320px;  
 background: #f8f8f8; 
 color: #1B1C21;
 font-family: 'TT Lakes',Arial, sans-serif;
@@ -48,18 +48,29 @@ img {
 .header, .main {
   margin: 0 auto;
   
-  /* max-width: 320px; */
+  
+}
+.header {
+  background: #fff;
+  border-bottom: 1px solid  #D9FFF5;
 }
 .header__container {
       display: flex;
-      justify-content: space-between;
+      justify-content:space-between;
       align-items: center;
-      flex-grow: 1;
       padding: 24px 16px;
   }
+
+  .header__logo {
+    position: relative;
+    margin-right: auto;
+   
+    padding-left: 20px;
+  } 
+
 .header__conacts {
   display: none;
-  width: 152px;
+  width: 172px;
   justify-content: space-between;
 }
 
@@ -83,7 +94,7 @@ left: 0;
 top: 4px;
 }
 
-  .header__button {
+  .button {
 display: block;
 width: 40px;
 height: 40px;
@@ -92,6 +103,12 @@ background: #FF3E79;
 border: none;
 font-size: 0;
   }
+  .button:hover {
+    opacity: 0.8;
+  }
+
+
+
   .menu {
    background-image: url('../img/icon1.svg');
    background-repeat: no-repeat;
@@ -129,10 +146,11 @@ font-size: 0;
 }
 
 .main__title {
+  position: relative;
   margin: 0;
   margin-bottom: 24px;
   padding: 0 16px;
-border-left: 4px solid #41F6D7;
+
 font-style: normal;
 font-weight: bold;
 font-size: 28px;
@@ -140,10 +158,37 @@ line-height: 40px;
 letter-spacing: -0.6px;
 }
 
+.main__title::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background: #41F6D7;
+  border-top-right-radius: 2px 2px;
+  border-bottom-right-radius: 2px 2px;
+  left: 0;
+}
+
+  .main_repair {
+    display: none;
+    justify-content: space-between;
+    width: 380px;
+    align-items: center;
+  margin-right: 20px;
+  }
+
+  .main_repair__label {
+    font-family: TT Lakes;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+text-align: left;
+  }
 .main__menu {
   margin-bottom: 24px;
   padding-right: 16px;
-  width: 1200px;
+  
 }
 
 .mainMenu__list {
@@ -152,10 +197,8 @@ letter-spacing: -0.6px;
   align-items: center;
   padding: 0;
   padding-left: 16px;
-  overflow: scroll;
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 100px;
+  overflow: auto;
+  
 }
 
 .mainMenu__item {  
@@ -193,6 +236,10 @@ white-space: nowrap;
   letter-spacing: 0.2px;
 }
 
+.promo__text--hidden-mobile {
+  display: none;
+}
+
 .promo__link {
   display: block;
   position: relative;
@@ -216,4 +263,127 @@ height: 24px;
 background: transparent url('../img/expand.svg') no-repeat 50% 50%;
 top: 0px;
 left: 0px;
+}
+
+@media (min-width:480px) {
+  .header__logo {
+  position: relative;
+  margin-right: auto;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.header__logo::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 32px;
+  background: #EAEAEA;
+  border-radius: 1px;
+  left: 0;
+  top: 14px;
+}
+
+.promo__text--hidden-mobile {
+  display:block;
+}
+
+.promo__text--hidden {
+  display: none;
+}
+}
+
+@media (min-width: 640px) {
+ .header__conacts {
+  display: flex;
+  padding-right: 20px;
+}
+}
+
+@media (min-width: 768px) {
+
+
+
+
+.main__title {
+  margin-bottom: 32px;
+}
+
+.mainMenu {
+  margin-bottom: 32px;
+}
+
+.promo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.promo_text__container {  
+  flex-basis: 45%;
+  height: auto;
+  
+}
+
+.promo__text {
+  margin-top: 0;
+}
+.promo___img__container {
+  margin-right: 40px;
+  flex-basis: 45%;
+}
+
+.promo__img {
+  border-radius: 6px;
+}
+
+.promo__text--hidden {
+  display: none;
+} 
+
+}
+@media (min-width: 1000px) {
+  .promo__text--hidden {
+    display: inline;
+  }
+
+}
+
+@media (min-width: 1200px) {
+.header {
+  display: none;
+}
+
+
+
+.main {
+  max-width: 1200px;
+}
+
+.main__tiltle_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main_repair {
+  display: flex;
+  
+}
+
+.main_repair__label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 180px;
+}
+  .promo {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
+  .promo_text__container, .promo___img__container {
+    flex-basis: 45%;
+  }  
 }
