@@ -210,12 +210,12 @@ margin-left: 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  overflow: auto;
+  
 }
 .mainMenu__list {  
   padding: 0;
   padding-left: 16px;
-  
+  overflow: auto;
 }
 
 .nav-item {
@@ -266,6 +266,11 @@ margin-left: 0;
   display: none;
 }
 
+.promo__link {
+  margin-left: 16px;
+  padding-left: 32px;
+}
+
 .readMore {
   display: block;
   position: relative;
@@ -275,8 +280,7 @@ margin-left: 0;
   letter-spacing: -0.2px;
   color: #1B1C21;
   text-decoration: none;
-  margin-left: 16px;
-  padding-left: 32px;
+  
 }
 
 .readMore::before {
