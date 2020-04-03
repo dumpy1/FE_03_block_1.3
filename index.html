@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -9,51 +9,64 @@
 </head>
 
 <body>
-    <header class="header header__container">
-        <div class="header__menu">
-            <button class="button--menu button">Меню</button>
-        </div>
-            
+    <header class="header ">
+        <div class="header__container">
+            <div class="header__menu">
+                <button class="button--menu button">Меню</button>
+            </div>
+
             <div class="header__logo logo">
                 <img class="logo__img" src="./img/logo.svg" alt="CPS" width="97" height="51">
             </div>
             <div class="header__conacts">
-                <button class="button--phone button">Позвонить</button>
-                <button class="button--chat button">Чат</button>
-                <button class="button--profile button">Профиль</button>
+                <button class=" button--phone button button--ml20">Позвонить</button>
+                <button class=" button--chat button button--ml20">Чат</button>
+                <button class=" button--profile button button--ml20">Профиль</button>
             </div>
             <div class="header__repair">
-                <button class="button--repair button">Оставить заявку</button>
-                <button class="button--status button">Статус ремонта</button>
+                <button class=" button--repair button button--ml20">Оставить заявку</button>
+                <button class="button--status button button--ml20">Статус ремонта</button>
             </div>
+        </div>
 
-        
     </header>
-    <main class="main main__container">       
-            <div class="services__tiltle_container">
+    <main class="main">
+        <section class="services main__container">
+            <div class="services__tiltle">
                 <h1 class="section__title title">Услуги и сервисы</h1>
-                <div class="serviceTracking serviceTracking__container">
-                    <label class="serviceTracking__label label">Оставить заявку
-                        <button class="serviceTracking__button button--repair button"></button>
-                    </label>
-                    <label class="serviceTracking__label label">Статус ремонта<button
-                            class="serviceTracking__button button--status button"></button></label>
+                <div class="serviceTracking ">
+                    <div class="serviceTracking__container">
+                        <label class="serviceTracking__label label">Оставить заявку
+                            <button class=" button--repair button button--ml20"></button>
+                        </label>
+                        <label class="serviceTracking__label label">Статус ремонта
+                            <button class=" button--status button button--ml20"></button></label>
+                    </div>
                 </div>
             </div>
-            <nav class="mainMenu mainMenu__container nav">
+            <nav class="mainMenu  nav">
                 <ul class="mainMenu__list nav-list">
-                    <li class="mainMenu__item mainMenu__item--active nav-item "><a class="mainMenu__link nav-link" href="#">Ремонтируемые бренды</a></li>
-                    <li class="mainMenu__item nav-item  "><a class="mainMenu__link nav-link" href="#">Ремонтируемые устройства</a></li>
-                    <li class="mainMenu__item nav-item "><a class="mainMenu__link nav-link" href="#">Цены на услуги</a></li>
-                    <li class="mainMenu__item nav-item "><a class="mainMenu__link nav-link" href="#">Адреса сервисных центров</a></li>
-                    <li class="mainMenu__item nav-item "><a class="mainMenu__link nav-link" href="#">Специальные цены</a></li>
+                    <li class="mainMenu__item nav-item--active nav-item "><a class="mainMenu__link nav-link"
+                            href="#">Ремонтируемые бренды</a></li>
+                    <li class="mainMenu__item nav-item  "><a class="mainMenu__link nav-link" href="#">Ремонтируемые
+                            устройства</a></li>
+                    <li class="mainMenu__item nav-item "><a class="mainMenu__link nav-link" href="#">Цены на услуги</a>
+                    </li>
+                    <li class="mainMenu__item nav-item "><a class="mainMenu__link nav-link" href="#">Адреса сервисных
+                            центров</a></li>
+                    <li class="mainMenu__item nav-item "><a class="mainMenu__link nav-link" href="#">Специальные
+                            цены</a></li>
                     <li class="mainMenu__item nav-item "><a class="mainMenu__link nav-link" href="#">Отзывы</a></li>
                 </ul>
             </nav>
-            <section class="promo promo__container">
+            <div class="promo ">
+                <div class="promo__container">
                 <div class="promo__item">
-                    <p class="promo__text paragraph">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-                    <p class="promo__text paragraph promo__text--hidden-mobile">Мы успешно работаем с 1992 года и заслужили
+                    <p class="promo__text paragraph">Мы являемся авторизованным сервисным центром по ремонту техники
+                        Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией
+                        производителя.</p>
+                    <p class="promo__text paragraph promo__text--hidden-mobile">Мы успешно работаем с 1992 года и
+                        заслужили
                         репутацию надежного партнера<span class="promo__text--hidden">, что подтверждает большое
                             количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в
                             свою очередь, советуют нас родным и близким. </span></p>
@@ -62,7 +75,11 @@
                 <div class="promo__item">
                     <img class="promo__img" src="./img/CSP_signboard.jpg" alt="">
                 </div>
-            </section>
+            </div>
+        </div>
+        </section>
+
+
     </main>
 </body>
 
