@@ -41,7 +41,7 @@ body {
   padding: 0;
 }
 
-img {
+.img {
   width: 100%;
   height: auto;
 }
@@ -56,7 +56,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 16px;
+  padding: 16px;
   margin: 0 auto;
 }
 
@@ -66,18 +66,27 @@ img {
   padding-left: 20px;
 }
 
-.header__conacts {
+.interaction {
   display: none;
-  justify-content: space-between;
+align-items: center;
+margin-left: auto;
 }
 
-.header__repair {
+
+.header__interaction {
+  padding-right: 20px;  
+}
+
+.tracking {
   display: flex;
-  position: relative;
-  justify-content: space-between;
+  align-items: center;
+}
+.header__tracking {  
+  position: relative;  
+  padding-left: 20px;
 }
 
-.header__repair::before {
+.header__tracking::before {
   content: "";
   display: block;
   position: absolute;
@@ -106,16 +115,20 @@ img {
   transition: .5s ease-in-out;
 }
 
-.button--ml20 {
+.interaction__button {
+  margin-left: 20px;
+}
+
+.tracking__button {
   margin-left: 20px;
 }
 
 .button--menu {
   background-image: url('../img/icon1.svg');
-margin-left: 0;
+
 }
 
-.button--phone {
+.button--call {
   background-image: url('../img/icon6.svg');
 
 }
@@ -142,22 +155,27 @@ margin-left: 0;
   padding: 24px 0;
   margin: 0 auto;
 }
+
+.services__tiltle-container {
+  display: flex;
+}
 .services__tiltle {
   margin-bottom: 24px;
 }
 .title {
+  margin: 0; 
   font-style: normal;
   font-weight: bold;
   font-size: 28px;
   line-height: 40px;
   letter-spacing: -0.6px;
 }
-.section__title {
+.services__title {
   position: relative;
-  margin: 0; 
+  margin-right: auto;
   padding: 0 16px;
 }
-.section__title::before {
+.services__title::before {
   content: "";
   position: absolute;
   width: 4px;
@@ -168,32 +186,31 @@ margin-left: 0;
   left: 0;
 }
 
-.serviceTracking{
-  display: none;
-    
-}
-
-.serviceTracking__container{
-  display: flex;
+.services__tracking{
+display: none;
   margin-right: 20px;
-  align-items: center;
+  
 }
 
-.label {
+.tracking__label {
    font-family: TT Lakes;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+  letter-spacing: -0.2px; 
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
 }
 
 
-.mainMenu {
+.main-menu {
   position: relative;
   margin-bottom: 24px;
 }
 
-.mainMenu:after {
+.main-menu:after {
   content: "";
   display: block;
   position: absolute;
@@ -204,13 +221,10 @@ margin-left: 0;
   background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
 }
 
-.nav-list {
-  display: flex;
+
+.nav__list {display: flex;
   justify-content: flex-start;
   align-items: center;
-  
-}
-.mainMenu__list {  
   padding: 0;
   padding-left: 16px;
   overflow: auto;
@@ -221,7 +235,7 @@ margin-left: 0;
 }
 
 .nav-item:hover {
- opacity: .8;
+ opacity: .6;
  transition: .5s ease-in-out;
 }
 
@@ -232,7 +246,7 @@ margin-left: 0;
 
 }
 
-.nav-link {
+.nav-item__link {
   display: block;
    text-decoration: none;
   font-weight: 500;
@@ -241,12 +255,8 @@ margin-left: 0;
   letter-spacing: -0.2px;
   color: #7E7E82;
   white-space: nowrap;
+   padding: 8px 16px;
 }
-
-.mainMenu__link {  
-  padding: 8px 16px;
-}
-
 
 .promo__container {
   margin: 0 auto;
@@ -326,7 +336,7 @@ margin-left: 0;
 }
 
 @media (min-width: 640px) {
-  .header__conacts {
+  .header__interaction {
     display: flex;
     padding-right: 20px;
   }
@@ -334,14 +344,11 @@ margin-left: 0;
 
 @media (min-width: 768px) {
 
-
-
-
-  .main__title {
+  .services__title {
     margin-bottom: 32px;
   }
 
-  .mainMenu {
+  .main-menu {
     margin-bottom: 32px;
   }
 
@@ -375,7 +382,7 @@ margin-left: 0;
     display: inline;
   }
 
-  .mainMenu__list {
+  .nav__list {
     overflow: visible;
     flex-wrap: wrap;
   }
@@ -398,17 +405,11 @@ margin-left: 0;
     align-items: center;
   }
 
-  .serviceTracking {
-    display: block;
-  }
-
-  .serviceTracking__label {
+  .services__tracking {
     display: flex;
-    align-items: center;
-    margin-left: 20px;
-    }
+  }
   
-    .label:hover {
+    .tracking__label:hover{
       opacity: .6;
    transition: .5s ease-in-out;
     }
