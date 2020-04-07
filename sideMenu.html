@@ -3,44 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sidebar</title>
+    <title>side-bar</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/sideMenu.css">
 </head>
 <body>
-    <section class="sideBar sideBar__container">
-        <div class="sideBar__header">
+    <section class="side-bar">
+        <div class="side-bar__header">
             <button class="button button--close"></button>
-            <div class="sideBar__logo logo">
-                        <img class="logo__img" src="./img/logo.svg" alt="CPS" width="97" height="51">
+            <div class="side-bar__logo logo">
+                        <img class="img" src="./img/logo.svg" alt="CPS" width="97" height="51">
                     </div>
             <button class="button button--find"></button>
         </div>
-        <div class="sideBar__nav nav">
-            <ul class="sideBar__list nav-list">
-                <li class="sideBar__item sideBar__item--active nav-item"><a class="sideBar__link nav-link" href="#">Ремонт техники</a></li>
-                <li class="sideBar__item nav-item"><a class="sideBar__link nav-link" href="#">Корпоративным клиентам</a></li>
-                <li class="sideBar__item nav-item"><a class="sideBar__link nav-link" href="#">Продавцам техники</a></li>
-                <li class="sideBar__item nav-item"><a class="sideBar__link nav-link" href="#">Партнерам</a></li>
-                <li class="sideBar__item nav-item"><a class="sideBar__link nav-link" href="#">Производителям</a></li>
-                <li class="sideBar__item nav-item"><a class="sideBar__link nav-link" href="#">Наши сервисные центры</a></li>
-                <li class="sideBar__item nav-item"><a class="sideBar__link nav-link" href="#">Контакты</a></li>
+
+        <nav class="side-bar__nav ">
+            <ul class="side-bar__list">
+                <li class="side-bar__nav-item side-bar__nav-item--active"><a class="side-bar__nav-link" href="#">Ремонт техники</a></li>
+                <li class="side-bar__nav-item"><a class="side-bar__nav-link" href="#">Корпоративным клиентам</a></li>
+                <li class="side-bar__nav-item"><a class="side-bar__nav-link" href="#">Продавцам техники</a></li>
+                <li class="side-bar__nav-item"><a class="side-bar__nav-link" href="#">Партнерам</a></li>
+                <li class="side-bar__nav-item"><a class="side-bar__nav-link" href="#">Производителям</a></li>
+                <li class="side-bar__nav-item"><a class="side-bar__nav-link" href="#">Наши сервисные центры</a></li>
+                <li class="side-bar__nav-item"><a class="side-bar__nav-link" href="#">Контакты</a></li>
             </ul>
-        </div>
-        <div class="sideBar__contacts">
-            <div class="interaction interaction__container">
-                <button class="button--phone button">Позвонить</button>
-                <button class="button--chat button">Чат</button>
-                <button class="button--profile button">Профиль</button>
+        </nav>
+
+        <div class="side-bar__footer contacts">
+            <div class="interaction side-bar__interaction">
+                <button class=" button--call button">Позвонить</button>
+                <button class="interaction__button button--chat button">Чат</button>
+                <button class="interaction__button button--profile button">Профиль</button>
             </div>
-            <a class="sideBar__link nav-link mail" href="mailto:mail@cps.com">mail@cps.com</a>
-            <a class="sideBar__link nav-link telNumber" href="tel:88008908900">8 800 890 8900</a>
+            <a class="contacts__link mail-link" href="mailto:mail@cps.com">mail@cps.com</a>
+            <a class="contacts__link phone-link" href="tel:88008908900">8 800 890 8900</a>
+            <div class="contact__language language">
+            <a href="#" class="language__link side-bar__link">Ru</a>
+            <a href="#" class="language__link side-bar__link">En</a>
+            <a href="#" class="language__link side-bar__link">Ch</a>
         </div>
-        <div class="language nav">
-            <a href="#" class="language__item sideBar__link nav-link">Ru</a>
-            <a href="#" class="language__item sideBar__link nav-link">En</a>
-            <a href="#" class="language__item sideBar__link nav-link">Ch</a>
         </div>
+        
         
         </section>
 </body>
