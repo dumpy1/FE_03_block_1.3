@@ -50,12 +50,11 @@ body {
 .header {
   background: #fff;
   border-bottom: 1px solid #D9FFF5;
+  display: flex;
+  align-items: center;
 }
 
 .header__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 16px;
   margin: 0 auto;
 }
@@ -68,21 +67,22 @@ body {
 
 .interaction {
   display: none;
-align-items: center;
+  align-items: center;
 
 }
 
 
 .header__interaction {
-  padding-right: 20px;  
+  padding-right: 20px;
 }
 
 .tracking {
   display: flex;
   align-items: center;
 }
-.header__tracking {  
-  position: relative;  
+
+.header__tracking {
+  position: relative;
   padding-left: 20px;
 }
 
@@ -159,22 +159,26 @@ align-items: center;
 .services__tiltle-container {
   display: flex;
 }
+
 .services__tiltle {
   margin-bottom: 24px;
 }
+
 .title {
-  margin: 0; 
+  margin: 0;
   font-style: normal;
   font-weight: bold;
   font-size: 28px;
   line-height: 40px;
   letter-spacing: -0.6px;
 }
+
 .services__title {
   position: relative;
   margin-right: auto;
   padding: 0 16px;
 }
+
 .services__title::before {
   content: "";
   position: absolute;
@@ -186,19 +190,19 @@ align-items: center;
   left: 0;
 }
 
-.services__tracking{
-display: none;
+.services__tracking {
+  display: none;
   margin-right: 20px;
-  
+
 }
 
 .tracking__label {
-   font-family: TT Lakes;
+  font-family: 'TT Lakes';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: -0.2px; 
+  letter-spacing: -0.2px;
   display: flex;
   align-items: center;
   margin-left: 20px;
@@ -222,7 +226,8 @@ display: none;
 }
 
 
-.nav__list {display: flex;
+.nav__list {
+  display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 0;
@@ -235,8 +240,8 @@ display: none;
 }
 
 .nav-item:hover {
- opacity: .6;
- transition: .5s ease-in-out;
+  opacity: .6;
+  transition: .5s ease-in-out;
 }
 
 .nav-item--active {
@@ -248,14 +253,14 @@ display: none;
 
 .nav-item__link {
   display: block;
-   text-decoration: none;
+  text-decoration: none;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
   color: #7E7E82;
   white-space: nowrap;
-   padding: 8px 16px;
+  padding: 8px 16px;
 }
 
 .promo__container {
@@ -292,7 +297,7 @@ display: none;
   letter-spacing: -0.2px;
   color: #1B1C21;
   text-decoration: none;
-  
+
 }
 
 .readMore::before {
@@ -360,7 +365,7 @@ display: none;
 
   .promo__item {
     flex-basis: 45%;
-      }
+  }
 
   .promo__text {
     margin-top: 0;
@@ -395,7 +400,7 @@ display: none;
 
 
 
-  .main__container{
+  .main__container {
     max-width: 1200px;
   }
 
@@ -408,10 +413,10 @@ display: none;
   .services__tracking {
     display: flex;
   }
-  
-    .tracking__label:hover{
-      opacity: .6;
-   transition: .5s ease-in-out;
-    }
-  
+
+  .tracking__label:hover {
+    opacity: .6;
+    transition: .5s ease-in-out;
+  }
+
 }
