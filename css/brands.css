@@ -1,0 +1,90 @@
+.brands {
+    border-top: 1px solid #D9FFF5;
+    background-color: #f8f8f8;
+    padding: 0;
+    padding-bottom: 39px;
+}
+
+.brands__title {
+    font-size: 16px;
+    font-weight: 500;
+line-height: 24px;
+letter-spacing: -0.2px;
+text-transform: uppercase;
+color: #7E7E82;
+display: block;
+padding: 16px 32px;
+background-image: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%);
+}
+.brands_slider {
+  padding: 24px 32px;  
+}
+.slider {
+    display: flex;
+    align-content: center;
+flex-wrap: wrap;
+}
+.slider-item {
+    width: 240px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: #FFFFFF;
+border: 1px solid #EAEAEA;
+border-radius: 6px;
+margin-bottom: 16px;
+padding-right: 16px;
+}
+.slider-item--lenovo {
+    background:#FFFFFF url('../img/brands/lenovo.svg') no-repeat 10% 50%;
+}
+.slider-item--samsung {
+    background:#FFFFFF url('../img/brands/samsung.svg') no-repeat 10% 50%;
+}
+.slider-item--apple {
+    background:#FFFFFF url('../img/brands/apple.svg') no-repeat 10% 50%;
+}
+.slider-item--viewsonic {
+    background:#FFFFFF url('../img/brands/viewsonic.svg') no-repeat 10% 50%;
+}
+.slider-item--bosh {
+    background:#FFFFFF url('../img/brands/bosh.svg') no-repeat 10% 50%;
+}
+.slider-item--hp {
+    background:#FFFFFF url('../img/brands/hp.svg') no-repeat 10% 50%;
+}
+.slider-item--acer {
+    background:#FFFFFF url('../img/brands/acer.svg') no-repeat 10% 50%;
+}
+.slider-item--sony {
+    background:#FFFFFF url('../img/brands/sony.svg') no-repeat 10% 50%;
+}
+
+.slider-item--mr32{
+    margin-right: 32px;
+}
+.slider-link {
+    display: block;
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #FF3E79;
+    background: url('../img/brands/dropdown.svg') no-repeat 50% 50%;
+    
+}
+.slider-link:hover {
+    opacity: 0.5;
+    transition: .5s ease-in-out;
+}
+
+.brands__span {
+padding-left: 24px;
+margin-left: 28px;
+
+}
+
+.brands__span--hidden {
+display: none;
+}
