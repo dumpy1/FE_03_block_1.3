@@ -37,15 +37,17 @@
                         class="slider-link" href="#">Acer</a></div>
                 <div class="swiper-slide slider-item slider-item--sony slider-item--mr slider-item--hidden768"><a
                         class="slider-link" href="#">Sony</a></div>
-                <div class="swiper-slide slider-item slider-item--lenovo  slider-item--mr slider-item--hidden768"><a
-                        class="slider-link" href="#">Lenovo</a>
+                <div
+                    class="swiper-slide slider-item slider-item--lenovo  slider-item--mr slider-item--hidden768 slider-item--hidden1120">
+                    <a class="slider-link" href="#">Lenovo</a>
                 </div>
                 <div
-                    class="swiper-slide slider-item slider-item--hidden slider-item--samsung  slider-item--mr slider-item--hidden768">
+                    class="swiper-slide slider-item slider-item--hidden slider-item--samsung  slider-item--mr slider-item--hidden768 slider-item--hidden1120">
                     <a class="slider-link" href="#">Samsung</a>
                 </div>
-                <div class="swiper-slide slider-item slider-item--apple  slider-item--mr slider-item--hidden768"><a
-                        class="slider-link" href="#">Apple</a>
+                <div
+                    class="swiper-slide slider-item slider-item--apple  slider-item--mr slider-item--hidden768 slider-item--hidden1120">
+                    <a class="slider-link" href="#">Apple</a>
                 </div>
             </div>
             <div class="swiper-pagination"></div>
@@ -67,16 +69,31 @@
             });
             console.log('Swipper is on');
         }
-        let showToggle = document.querySelector('.show-toggle');
-        console.log('showToggle: ', showToggle);
-        let hiddenItem = document.querySelectorAll('.slider-item--hidden768');
-        console.log('hiddenItem: ', hiddenItem);
 
-        showToggle.addEventListener('click', () => {
-            console.log('click');
+        let showToggle = document.querySelector('.show-toggle');
+        
+        let hiddenItem;
+
+        if (window.innerWidth < 1120) {
+            hiddenItem = document.querySelectorAll('.slider-item--hidden768');
+            showToggle.addEventListener('click', () => {           
+
+for (let i = 0; i < hiddenItem.length; i++) {
+    hiddenItem[i].classList.toggle('slider-item--hidden768');
+}
+
+if (showToggle.textContent == 'Показать все') {
+    showToggle.textContent = 'Скрыть';
+} else {
+    showToggle.textContent = 'Показать все';
+}
+})
+        } else {
+            hiddenItem = document.querySelectorAll('.slider-item--hidden1120');        
+        showToggle.addEventListener('click', () => {           
 
             for (let i = 0; i < hiddenItem.length; i++) {
-                console.log(hiddenItem[i].classList.toggle('slider-item--hidden768'));
+                hiddenItem[i].classList.toggle('slider-item--hidden1120');
             }
 
             if (showToggle.textContent == 'Показать все') {
@@ -84,7 +101,7 @@
             } else {
                 showToggle.textContent = 'Показать все';
             }
-        })
+        })  }      
     </script>
 </body>
 

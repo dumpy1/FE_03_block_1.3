@@ -121,7 +121,7 @@ html {
 
  .slider { 
     display: flex;
-    align-content: center;
+    align-items: stretch;
     flex-wrap: wrap;
     box-sizing: border-box;
 } 
@@ -170,7 +170,13 @@ html {
 }
 
 @media (min-width: 1120px) {
-    
+    .slider-item--hidden768 {
+        display: flex;
+    }
+
+    .slider-item--hidden1120 {
+        display: none;
+    }
 
     .slider-item {
         width: 240px;
@@ -181,7 +187,7 @@ html {
         padding: 24px 32px;
     }
 
-    .slider-item--mr {
+   .slider-item--mr { 
         margin-right: 30px;
     }
 
@@ -191,6 +197,6 @@ html {
 
     .slider-item--mr:nth-child(4n) {
         margin-right: 0;
-    }
+    } 
 
 }
