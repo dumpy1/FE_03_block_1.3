@@ -15,38 +15,35 @@
 
 <body>
     <section class="brands main__container">
-        <h2 class="brands__title title">Ремонт техники различных брендов</h2>
+        <h2 class="section-title">Ремонт техники различных брендов</h2>
         <div class="swiper-container">
             <div class="brands__slider slider swiper-wrapper">
-                <div class="swiper-slide slider-item slider-item--lenovo slider-item--mr"><a class="slider-link"
+                <div class="swiper-slide slider-item slider-item--lenovo"><a class="slider-link"
                         href="#">Lenovo</a>
                 </div>
-                <div class="swiper-slide slider-item slider-item--samsung  slider-item--mr"><a class="slider-link"
+                <div class="swiper-slide slider-item slider-item--samsung "><a class="slider-link"
                         href="#">Samsung</a>
                 </div>
-                <div class="swiper-slide slider-item slider-item--apple  slider-item--mr"><a class="slider-link"
+                <div class="swiper-slide slider-item slider-item--apple "><a class="slider-link"
                         href="#">Apple</a>
                 </div>
-                <div class="swiper-slide slider-item slider-item--viewsonic  slider-item--mr"><a class="slider-link"
+                <div class="swiper-slide slider-item slider-item--viewsonic "><a class="slider-link"
                         href="#">ViewSonic</a></div>
-                <div class="swiper-slide slider-item slider-item--bosh  slider-item--mr"><a class="slider-link"
+                <div class="swiper-slide slider-item slider-item--bosh "><a class="slider-link"
                         href="#">Bosh</a></div>
-                <div class="swiper-slide slider-item slider-item--hp  slider-item--mr"><a class="slider-link"
+                <div class="swiper-slide slider-item slider-item--hp "><a class="slider-link"
                         href="#">HP</a></div>
-                <div class="swiper-slide slider-item slider-item--acer  slider-item--mr slider-item--hidden768"><a
-                        class="slider-link" href="#">Acer</a></div>
-                <div class="swiper-slide slider-item slider-item--sony slider-item--mr slider-item--hidden768"><a
-                        class="slider-link" href="#">Sony</a></div>
-                <div
-                    class="swiper-slide slider-item slider-item--lenovo  slider-item--mr slider-item--hidden768 slider-item--hidden1120">
+                <div class="swiper-slide slider-item slider-item--acer  "><a class="slider-link"
+                        href="#">Acer</a></div>
+                <div class="swiper-slide slider-item slider-item--sony "><a class="slider-link"
+                        href="#">Sony</a></div>
+                <div class="swiper-slide slider-item slider-item--lenovo ">
                     <a class="slider-link" href="#">Lenovo</a>
                 </div>
-                <div
-                    class="swiper-slide slider-item slider-item--hidden slider-item--samsung  slider-item--mr slider-item--hidden768 slider-item--hidden1120">
+                <div class="swiper-slide slider-item slider-item--hidden slider-item--samsung ">
                     <a class="slider-link" href="#">Samsung</a>
                 </div>
-                <div
-                    class="swiper-slide slider-item slider-item--apple  slider-item--mr slider-item--hidden768 slider-item--hidden1120">
+                <div class="swiper-slide slider-item slider-item--apple ">
                     <a class="slider-link" href="#">Apple</a>
                 </div>
             </div>
@@ -68,40 +65,24 @@
                 },
             });
             console.log('Swipper is on');
-        }
-
-        let showToggle = document.querySelector('.show-toggle');
-        
-        let hiddenItem;
-
-        if (window.innerWidth < 1120) {
-            hiddenItem = document.querySelectorAll('.slider-item--hidden768');
-            showToggle.addEventListener('click', () => {           
-
-for (let i = 0; i < hiddenItem.length; i++) {
-    hiddenItem[i].classList.toggle('slider-item--hidden768');
-}
-
-if (showToggle.textContent == 'Показать все') {
-    showToggle.textContent = 'Скрыть';
-} else {
-    showToggle.textContent = 'Показать все';
-}
-})
         } else {
-            hiddenItem = document.querySelectorAll('.slider-item--hidden1120');        
-        showToggle.addEventListener('click', () => {           
+            let showToggle = document.querySelector('.show-toggle');
+            let hiddenItem = document.querySelector('.brands__slider');
 
-            for (let i = 0; i < hiddenItem.length; i++) {
-                hiddenItem[i].classList.toggle('slider-item--hidden1120');
-            }
 
-            if (showToggle.textContent == 'Показать все') {
-                showToggle.textContent = 'Скрыть';
-            } else {
-                showToggle.textContent = 'Показать все';
-            }
-        })  }      
+            showToggle.addEventListener('click', () => {
+                hiddenItem.style.height = 100 + '%';
+                if (showToggle.textContent == 'Показать все') {
+                    showToggle.textContent = 'Скрыть';
+                    showToggle.classList.add('show-toggle--rotate');
+                } else {
+                    hiddenItem.style.height = 200 + 'px';
+                    showToggle.textContent = 'Показать все';
+                    showToggle.classList.remove('show-toggle--rotate');
+
+                }
+            })
+        }
     </script>
 </body>
 
