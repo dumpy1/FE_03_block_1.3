@@ -1,6 +1,6 @@
 html {
     box-sizing: border-box;
-  }
+}
 
 .brands {
     border-top: 1px solid #D9FFF5;
@@ -27,22 +27,36 @@ html {
 }
 
 
-.swiper-container{
+.swiper-container {
     width: 100%;
     height: 130px;
-    margin-bottom: 24px; 
+    margin-bottom: 24px;
 }
 
-.swiper-container-horizontal > .swiper-pagination-bullets {
+.swiper-container-horizontal>.swiper-pagination-bullets {
     bottom: 10px;
-    left: -80px;
+    left: -1%;
 }
+
+.swiper-container::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 81px;
+    top: 16px;
+    right: 0;
+    background-image: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    z-index: 3;
+
+}
+
 .swiper-pagination-bullet {
     background: #ddd;
 }
- .swiper-pagination-bullet-active {
+
+.swiper-pagination-bullet-active {
     background: #B5B6BC;
- }
+}
 
 .slider-item {
     box-sizing: border-box;
@@ -54,7 +68,7 @@ html {
     background: #FFFFFF;
     border: 1px solid #EAEAEA;
     border-radius: 6px;
-    margin: 8px;
+    /* margin: 8px; */
     padding-right: 16px;
 }
 
@@ -114,19 +128,20 @@ html {
 
 }
 
-.brands__span--hidden {
+.brands__span {
     display: none;
 }
 
 @media (min-width: 767px) {
 
- .slider { 
-    display: flex;
-    align-items: stretch;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    overflow-y: hidden;
-} 
+    .slider {
+        display: flex;
+        align-items: stretch;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        overflow-y: hidden;
+    }
+
     .swiper-container {
         width: inherit;
         height: inherit;
@@ -139,41 +154,36 @@ html {
     }
 
     .slider-item {
-        width: 224px; 
-         margin: 8px ;      
+        width: 224px;
+        margin: 8px;
     }
-
-    
-    
 
     .show-toggle {
         display: block;
-        
-    }
-
-    .show-toggle--rotate {
         transition: all 0.5s ease-in-out;
     }
 
+
+
     .show-toggle--rotate::before {
-transform: rotate(180deg);
+        transform: rotate(180deg);
     }
 
 }
 
 @media (min-width: 1120px) {
-    
+
     .slider-item {
         width: 240px;
         margin: 8px 16px;
-    }  
+    }
 
     .brands__slider {
         max-width: 1120px;
         padding: 24px 16px;
     }
 
-   .slider-item--mr { 
+    .slider-item--mr {
         margin-right: 30px;
     }
 
